@@ -1,0 +1,65 @@
+.footer{
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: rgb(248, 34, 34);
+    background-color: rgb(0, 0, 0);
+  }
+
+  /* .carousel-body{
+    height: 20rem;
+  } */
+
+  .search-bar form{
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
+    
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #carousel{
+    max-height: 400px;
+  }
+  
+  .signup form{
+    margin: 40px;
+    padding: 60px;
+     width: 400px;
+     border: 2px;
+     background-color: rgb(193, 223, 249);
+     border-radius: 8px;
+  }
+
+  .signup {
+      display: flex;
+      justify-content: center;
+  }
+
+  .signup button{
+    width: 100%;
+  }
+
+  .signup label{
+    font-weight: 700;
+    align-items: left;
+    display: flex;
+    justify-content: left;
+  }
+   
+ 
+  .credentials{
+    color: rgb(3, 126, 234);
+  }
+   
