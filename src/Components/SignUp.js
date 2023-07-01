@@ -6,6 +6,11 @@ const SignUp = () => {
 
     const handleSubmit=async(e)=>{
             e.preventDefault();
+
+            let  found=await checkUserIsPresentOrNot(credentials.email);
+            if(found === true){ alert('Email already exist'); return;}
+            // console.log("Checking email in handle submit ",credentials.email)
+
             const response= await fetch("http://localhost:3001/addUser",{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
@@ -13,13 +18,34 @@ const SignUp = () => {
             });
 
             const json=await response.json();
-            console.log(json)
+            // console.log(json)
 
             if(!json.success){ alert('User created') ;setCredentials({name:'',email:'',password:''});}
             
     }
 
+    async function checkUserIsPresentOrNot(newEmail)
+    {
+      const response= await fetch("http://localhost:3001/getUsers",{
+                method:'GET',
+                headers:{'Content-Type':'application/json'} 
+            });
+            const json=await response.json();
+
+            for(let i=0;i<json.length;i++)
+            {
+              console.log(json[i].email);
+                if(json[i].email === newEmail) {
+                  //  console.log('User email already exist ');  
+                   return true;}
+            }
+           //   console.log('User email does not exist ')
+            return false;
+
+    }
+
     const onChange=(event)=>{
+      // console.warn("email is = ",event.target.value);
         setCredentials({...credentials,[event.target.name]:event.target.value})
     }
     

@@ -46,9 +46,8 @@ setSearch(input)
             </form>
             </div>
             <div className='cards'>
-            { console.log('item searched ',search)}
-            {/* <CardC /><CardC /><CardC /><CardC /><CardC /><CardC />
-            <CardC /><CardC /><CardC /><CardC /><CardC /><CardC /> */
+            {/* { console.log('item searched ',search)} */}
+            { 
             search=== '' ?foodItems.map((item,idx)=>{
                 return   <CardC  foodItemProp={item} />  
             }):

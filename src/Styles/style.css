@@ -63,3 +63,32 @@
     color: rgb(3, 126, 234);
   }
    
+ .cart-btn{
+  color: aliceblue;
+  padding: 12px;
+ }
+   
+ .blink{
+  animation: blinker 1.5s linear infinite;
+  color: red;
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes blinker {
+  70% {
+      opacity: 0;
+  }}
+
+  .apply-button
+    {
+        margin-left: 15px;
+        width: 70px;
+    }
+
+    .apply-coupon
+    {
+        border-radius: 5px;
+    }
+
+    .sub-name{
+      color: aliceblue;
+    }

@@ -14,13 +14,16 @@ const Login = () => {
             });
 
             const json=await response.json();
-            console.log(json)
+            // console.log(json)
 
             if(!json.success){ alert('Please enter valid credentials');setCredentials({email:'',password:''});}
             
             if(json.success){
               localStorage.setItem("authToken",json.authToken);
-              console.log(localStorage.getItem("authToken"));
+              localStorage.setItem("userEmail",credentials.email);
+              
+              // console.log(localStorage.getItem("authToken"));
+              // console.warn(localStorage.getItem("userEmail"));
                 navigate('/');
             }
     }
